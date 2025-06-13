@@ -88,7 +88,7 @@ class ActionZenAttachStickToFire: ActionContinuousBase
 		stick.SetZenFireplaceData(projectedStickPos, projectedStickOri, fireplace);
 		action_data.m_Player.GetHumanInventory().DropEntity(InventoryMode.SERVER, action_data.m_Player, action_data.m_MainItem);
 
-		fireplace.AddZenAttachedStick(action_data.m_MainItem);
+		fireplace.AddZenAttachedStick(stick);
 	}
 
 	static vector GetZenAttachedProjectedStickPos(notnull PlayerBase player, notnull FireplaceBase fireplace, out vector stickOrientation)
